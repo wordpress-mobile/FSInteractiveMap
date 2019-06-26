@@ -1,6 +1,10 @@
 FSInteractiveMap
 ================
 
+This fork is used by [WordPress iOS](https://github.com/wordpress-mobile/WordPress-iOS). It required some bugfixes and unfortunately the original project doesn’t appear to be maintained.
+
+---
+
 A charting library to visualize data on a map. It's like <a href="https://developers.google.com/chart/interactive/docs/gallery/geochart">geochart</a> but for iOS!
 
 The idea behind this library is to load a SVG file of a map and display it simply in a view. On top of that you can know when a specific area is clicked.
