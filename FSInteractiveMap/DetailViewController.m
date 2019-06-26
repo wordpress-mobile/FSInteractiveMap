@@ -47,6 +47,8 @@
         [self initExample2];
     } else if([self.detailItem isEqualToString:@"Example 3"]) {
         [self initExample3];
+    } else if([self.detailItem isEqualToString:@"Fix crash with one country"]) {
+        [self initExampleFix];
     }
 }
 
@@ -117,6 +119,16 @@
         layer.shadowRadius = 5;
         layer.shadowOffset = CGSizeMake(0, 0);
     }];
+    
+    [self.view addSubview:map];
+}
+    
+- (void)initExampleFix
+{
+    NSDictionary* data = @{ @"fr" : @12 };
+    
+    FSInteractiveMapView* map = [[FSInteractiveMapView alloc] initWithFrame:CGRectMake(-1, 64, self.view.frame.size.width + 2, 500)];
+    [map loadMap:@"europe" withData:data colorAxis:@[[UIColor blueColor], [UIColor greenColor], [UIColor yellowColor], [UIColor redColor]]];
     
     [self.view addSubview:map];
 }
