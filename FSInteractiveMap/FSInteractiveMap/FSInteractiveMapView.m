@@ -8,6 +8,7 @@
 
 #import "FSInteractiveMapView.h"
 #import "FSSVG.h"
+#include <math.h>
 
 @interface FSInteractiveMapView ()
 
@@ -105,7 +106,9 @@
     for (id key in data) {
         NSNumber* value = [data objectForKey:key];
         float s = ([value floatValue] - min) / (max - min);
+        s = isnan(s) ? 0 : s;
         float segmentLength = 1.0 / ([colors count] - 1);
+        segmentLength = isnan(segmentLength) ? 0 : segmentLength;
         int minColorIndex = MAX(floorf(s / segmentLength),0);
         int maxColorIndex = MIN(ceilf(s / segmentLength), [colors count] - 1);
         
