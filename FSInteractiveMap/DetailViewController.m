@@ -47,8 +47,8 @@
         [self initExample2];
     } else if([self.detailItem isEqualToString:@"Example 3"]) {
         [self initExample3];
-    } else if([self.detailItem isEqualToString:@"Fix crash with one country"]) {
-        [self initExampleFix];
+    } else if([self.detailItem isEqualToString:@"Example 4"]) {
+        [self initExample4];
     }
 }
 
@@ -123,7 +123,7 @@
     [self.view addSubview:map];
 }
     
-- (void)initExampleFix
+- (void)initExample4
 {
     NSDictionary* data = @{ @"fr" : @12 };
     

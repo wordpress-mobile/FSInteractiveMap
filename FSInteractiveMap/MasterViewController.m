@@ -29,7 +29,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    _examples = @[@"Example 1", @"Example 2", @"Example 3", @"Fix crash with one country"];
+    _examples = @[@"Example 1", @"Example 2", @"Example 3", @"Example 4"];
    
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
