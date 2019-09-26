@@ -12,6 +12,9 @@
 @interface DetailViewController ()
 
 @property (nonatomic, weak) CAShapeLayer* oldClickedLayer;
+@property (nonatomic, strong) FSInteractiveMapView *map;
+@property (nonatomic, strong) NSDictionary *data;
+@property (nonatomic, strong) NSArray *colors;
 
 @end
 
@@ -19,7 +22,8 @@
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(id)newDetailItem {
+- (void)setDetailItem:(id)newDetailItem
+{
     if (_detailItem != newDetailItem) {
         _detailItem = newDetailItem;
             
@@ -28,15 +32,21 @@
     }
 }
 
-- (void)configureView {
+- (void)configureView
+{
     // Update the user interface for the detail item.
     if (self.detailItem) {
         self.title = self.detailItem;
         self.detailDescriptionLabel.text = @"";
     }
+
+    if (@available(iOS 13.0, *)) {
+        self.view.backgroundColor = [UIColor systemBackgroundColor];
+    }
 }
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self configureView];
@@ -65,52 +75,55 @@
 
 - (void)initExample1
 {
-    NSDictionary* data = @{@"asia" : @12,
-                           @"australia" : @2,
-                           @"north_america" : @5,
-                           @"south_america" : @14,
-                           @"africa" : @5,
-                           @"europe" : @20
-                           };
+    _data = @{ @"asia" : @12,
+               @"australia" : @2,
+               @"north_america" : @5,
+               @"south_america" : @14,
+               @"africa" : @5,
+               @"europe" : @20 };
     
-    FSInteractiveMapView* map = [[FSInteractiveMapView alloc] initWithFrame:CGRectMake(16, 96, self.view.frame.size.width - 32, self.view.frame.size.height)];
+    _map = [[FSInteractiveMapView alloc] initWithFrame:CGRectMake(16, 96, self.view.frame.size.width - 32, self.view.frame.size.height)];
     
-    [map loadMap:@"world-continents-low" withData:data colorAxis:@[[UIColor lightGrayColor], [UIColor darkGrayColor]]];
+    [_map loadMap:@"world-continents-low" withData:_data colorAxis:@[[UIColor lightGrayColor], [UIColor darkGrayColor]]];
     
-    [map setClickHandler:^(NSString* identifier, CAShapeLayer* layer) {
-        self.detailDescriptionLabel.text = [NSString stringWithFormat:@"Continent clicked: %@", identifier];
+    __weak typeof(self) weakSelf = self;
+    [_map setClickHandler:^(NSString* identifier, CAShapeLayer* layer) {
+        weakSelf.detailDescriptionLabel.text = [NSString stringWithFormat:@"Continent clicked: %@", identifier];
     }];
     
-    [self.view addSubview:map];
+    [self.view addSubview:_map];
 }
 
 - (void)initExample2
 {
-    NSDictionary* data = @{@"fr" : @12,
-                           @"it" : @2,
-                           @"de" : @9,
-                           @"pl" : @24,
-                           @"uk" : @17
-                           };
+    _data = @{ @"fr" : @12,
+               @"it" : @2,
+               @"de" : @9,
+               @"pl" : @24,
+               @"uk" : @17 };
+    _colors = @[[UIColor blueColor], [UIColor greenColor], [UIColor yellowColor], [UIColor redColor]];
     
-    FSInteractiveMapView* map = [[FSInteractiveMapView alloc] initWithFrame:CGRectMake(-1, 64, self.view.frame.size.width + 2, 500)];
-    [map loadMap:@"europe" withData:data colorAxis:@[[UIColor blueColor], [UIColor greenColor], [UIColor yellowColor], [UIColor redColor]]];
+    _map = [[FSInteractiveMapView alloc] initWithFrame:CGRectMake(-1, 64, self.view.frame.size.width + 2, 500)];
+    [self example2BasicColors];
+    [_map loadMap:@"europe" withData:_data colorAxis:_colors];
     
-    [self.view addSubview:map];
+    [self.view addSubview:_map];
 }
 
 - (void)initExample3
 {
-    FSInteractiveMapView* map = [[FSInteractiveMapView alloc] initWithFrame:CGRectMake(16, 96, self.view.frame.size.width - 32, 500)];
-    [map loadMap:@"usa-low" withColors:nil];
+    _map = [[FSInteractiveMapView alloc] initWithFrame:CGRectMake(16, 96, self.view.frame.size.width - 32, 500)];
+    [_map loadMap:@"usa-low" withColors:nil];
     
-    [map setClickHandler:^(NSString* identifier, CAShapeLayer* layer) {
-        if(_oldClickedLayer) {
-            _oldClickedLayer.zPosition = 0;
-            _oldClickedLayer.shadowOpacity = 0;
+    __weak typeof(self) weakSelf = self;
+    [_map setClickHandler:^(NSString* identifier, CAShapeLayer* layer) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if(strongSelf.oldClickedLayer) {
+            strongSelf.oldClickedLayer.zPosition = 0;
+            strongSelf.oldClickedLayer.shadowOpacity = 0;
         }
         
-        _oldClickedLayer = layer;
+        strongSelf.oldClickedLayer = layer;
         
         // We set a simple effect on the layer clicked to highlight it
         layer.zPosition = 10;
@@ -120,17 +133,38 @@
         layer.shadowOffset = CGSizeMake(0, 0);
     }];
     
-    [self.view addSubview:map];
+    [self.view addSubview:_map];
 }
     
 - (void)initExample4
 {
-    NSDictionary* data = @{ @"fr" : @12 };
+    _data = @{ @"fr" : @12 };
     
-    FSInteractiveMapView* map = [[FSInteractiveMapView alloc] initWithFrame:CGRectMake(-1, 64, self.view.frame.size.width + 2, 500)];
-    [map loadMap:@"europe" withData:data colorAxis:@[[UIColor blueColor], [UIColor greenColor], [UIColor yellowColor], [UIColor redColor]]];
+    _map = [[FSInteractiveMapView alloc] initWithFrame:CGRectMake(-1, 64, self.view.frame.size.width + 2, 500)];
+    [_map loadMap:@"europe" withData:_data colorAxis:@[[UIColor blueColor], [UIColor greenColor], [UIColor yellowColor], [UIColor redColor]]];
     
-    [self.view addSubview:map];
+    [self.view addSubview:_map];
+}
+
+- (void)example2BasicColors
+{
+    if (@available(iOS 13.0, *)) {
+        self.map.fillColor = [UIColor systemGray5Color];
+        self.map.strokeColor = [UIColor systemBackgroundColor];
+        self.map.backgroundColor = self.map.strokeColor;
+    }
+}
+
+- (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection
+{
+    [super traitCollectionDidChange:previousTraitCollection];
+
+    if([self.detailItem isEqualToString:@"Example 2"]) {
+        if (@available(iOS 13.0, *)) {
+            [self example2BasicColors];
+            [_map setData:_data colorAxis:_colors];
+        }
+    }
 }
 
 @end

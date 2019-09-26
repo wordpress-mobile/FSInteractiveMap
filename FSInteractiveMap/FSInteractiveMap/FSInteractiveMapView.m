@@ -147,6 +147,7 @@
         
         if([self.layer.sublayers[i] isKindOfClass:CAShapeLayer.class] && element.fill) {
             CAShapeLayer* l = (CAShapeLayer*)self.layer.sublayers[i];
+            l.strokeColor = self.strokeColor.CGColor;
             
             if(element.fill) {
                 if(colorsDict && [colorsDict objectForKey:element.identifier]) {
