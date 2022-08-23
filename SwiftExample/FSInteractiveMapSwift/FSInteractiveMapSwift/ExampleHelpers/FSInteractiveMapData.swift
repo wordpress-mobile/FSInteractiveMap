@@ -11,6 +11,7 @@ import Foundation
 public enum SVGNamed: String {
     /// The SVG file to load.
     case USA = "usa-low"
+    case world = "world"
     // TODO: Add support for these
 //    case UK = "uk-low"
 //    case France = "france-low"
