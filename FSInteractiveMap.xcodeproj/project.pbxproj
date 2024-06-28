@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E302F891C53EA81009A368A /* FSSVGParsingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E302F881C53EA81009A368A /* FSSVGParsingTests.m */; };
+		0C3F754A2C2F2BE2008F190C /* FSSVGUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F75452C2F2BE2008F190C /* FSSVGUtils.m */; };
+		0C3F754B2C2F2BE2008F190C /* FSSVG.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F75462C2F2BE2008F190C /* FSSVG.m */; };
+		0C3F754C2C2F2BE2008F190C /* FSSVGPathElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F75492C2F2BE2008F190C /* FSSVGPathElement.m */; };
 		8ED756AE1A5095A80073A6A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED756AD1A5095A80073A6A2 /* main.m */; };
 		8ED756B11A5095A80073A6A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED756B01A5095A80073A6A2 /* AppDelegate.m */; };
 		8ED756B41A5095A80073A6A2 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED756B31A5095A80073A6A2 /* MasterViewController.m */; };
@@ -15,7 +17,6 @@
 		8ED756BA1A5095A80073A6A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ED756B81A5095A80073A6A2 /* Main.storyboard */; };
 		8ED756BC1A5095A80073A6A2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ED756BB1A5095A80073A6A2 /* Images.xcassets */; };
 		8ED756BF1A5095A80073A6A2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED756BD1A5095A80073A6A2 /* LaunchScreen.xib */; };
-		8ED756CB1A5095A80073A6A2 /* FSInteractiveMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED756CA1A5095A80073A6A2 /* FSInteractiveMapTests.m */; };
 		8ED756EB1A5099480073A6A2 /* austria-low.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8ED756D61A5099480073A6A2 /* austria-low.svg */; };
 		8ED756EC1A5099480073A6A2 /* beef-cuts.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8ED756D71A5099480073A6A2 /* beef-cuts.svg */; };
 		8ED756ED1A5099480073A6A2 /* china-low.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8ED756D81A5099480073A6A2 /* china-low.svg */; };
@@ -29,22 +30,15 @@
 		8ED756F51A5099480073A6A2 /* world-continents-low.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8ED756E01A5099480073A6A2 /* world-continents-low.svg */; };
 		8ED756F61A5099480073A6A2 /* world-low.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8ED756E11A5099480073A6A2 /* world-low.svg */; };
 		8ED756F71A5099480073A6A2 /* FSInteractiveMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED756E31A5099480073A6A2 /* FSInteractiveMapView.m */; };
-		8ED756F81A5099480073A6A2 /* FSSVG.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED756E61A5099480073A6A2 /* FSSVG.m */; };
-		8ED756F91A5099480073A6A2 /* FSSVGPathElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED756E81A5099480073A6A2 /* FSSVGPathElement.m */; };
-		8ED756FA1A5099480073A6A2 /* FSSVGUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED756EA1A5099480073A6A2 /* FSSVGUtils.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		8ED756C51A5095A80073A6A2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8ED756A01A5095A80073A6A2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8ED756A71A5095A80073A6A2;
-			remoteInfo = FSInteractiveMap;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		0C3F75442C2F2BE2008F190C /* FSSVGUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSVGUtils.h; sourceTree = "<group>"; };
+		0C3F75452C2F2BE2008F190C /* FSSVGUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSVGUtils.m; sourceTree = "<group>"; };
+		0C3F75462C2F2BE2008F190C /* FSSVG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSVG.m; sourceTree = "<group>"; };
+		0C3F75472C2F2BE2008F190C /* FSSVG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSVG.h; sourceTree = "<group>"; };
+		0C3F75482C2F2BE2008F190C /* FSSVGPathElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSVGPathElement.h; sourceTree = "<group>"; };
+		0C3F75492C2F2BE2008F190C /* FSSVGPathElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSVGPathElement.m; sourceTree = "<group>"; };
 		8E302F881C53EA81009A368A /* FSSVGParsingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSVGParsingTests.m; sourceTree = "<group>"; };
 		8ED756A81A5095A80073A6A2 /* FSInteractiveMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSInteractiveMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED756AC1A5095A80073A6A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,9 +52,6 @@
 		8ED756B91A5095A80073A6A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8ED756BB1A5095A80073A6A2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8ED756BE1A5095A80073A6A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		8ED756C41A5095A80073A6A2 /* FSInteractiveMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FSInteractiveMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8ED756C91A5095A80073A6A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8ED756CA1A5095A80073A6A2 /* FSInteractiveMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSInteractiveMapTests.m; sourceTree = "<group>"; };
 		8ED756D61A5099480073A6A2 /* austria-low.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "austria-low.svg"; sourceTree = "<group>"; };
 		8ED756D71A5099480073A6A2 /* beef-cuts.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "beef-cuts.svg"; sourceTree = "<group>"; };
 		8ED756D81A5099480073A6A2 /* china-low.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "china-low.svg"; sourceTree = "<group>"; };
@@ -75,12 +66,6 @@
 		8ED756E11A5099480073A6A2 /* world-low.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "world-low.svg"; sourceTree = "<group>"; };
 		8ED756E21A5099480073A6A2 /* FSInteractiveMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSInteractiveMapView.h; sourceTree = "<group>"; };
 		8ED756E31A5099480073A6A2 /* FSInteractiveMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSInteractiveMapView.m; sourceTree = "<group>"; };
-		8ED756E51A5099480073A6A2 /* FSSVG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSVG.h; sourceTree = "<group>"; };
-		8ED756E61A5099480073A6A2 /* FSSVG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSVG.m; sourceTree = "<group>"; };
-		8ED756E71A5099480073A6A2 /* FSSVGPathElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSVGPathElement.h; sourceTree = "<group>"; };
-		8ED756E81A5099480073A6A2 /* FSSVGPathElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSVGPathElement.m; sourceTree = "<group>"; };
-		8ED756E91A5099480073A6A2 /* FSSVGUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSVGUtils.h; sourceTree = "<group>"; };
-		8ED756EA1A5099480073A6A2 /* FSSVGUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSVGUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,21 +76,62 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8ED756C11A5095A80073A6A2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C3F753F2C2F2A17008F190C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0C3F75412C2F2A25008F190C /* FSInteractiveMap */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		0C3F75402C2F2A1D008F190C /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				0C3F75422C2F2A2A008F190C /* FSInteractiveMapTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		0C3F75412C2F2A25008F190C /* FSInteractiveMap */ = {
+			isa = PBXGroup;
+			children = (
+				0C3F75432C2F2B08008F190C /* include */,
+				8ED756E31A5099480073A6A2 /* FSInteractiveMapView.m */,
+				0C3F75472C2F2BE2008F190C /* FSSVG.h */,
+				0C3F75462C2F2BE2008F190C /* FSSVG.m */,
+				0C3F75482C2F2BE2008F190C /* FSSVGPathElement.h */,
+				0C3F75492C2F2BE2008F190C /* FSSVGPathElement.m */,
+				0C3F75442C2F2BE2008F190C /* FSSVGUtils.h */,
+				0C3F75452C2F2BE2008F190C /* FSSVGUtils.m */,
+			);
+			path = FSInteractiveMap;
+			sourceTree = "<group>";
+		};
+		0C3F75422C2F2A2A008F190C /* FSInteractiveMapTests */ = {
+			isa = PBXGroup;
+			children = (
+				8E302F881C53EA81009A368A /* FSSVGParsingTests.m */,
+			);
+			path = FSInteractiveMapTests;
+			sourceTree = "<group>";
+		};
+		0C3F75432C2F2B08008F190C /* include */ = {
+			isa = PBXGroup;
+			children = (
+				8ED756E21A5099480073A6A2 /* FSInteractiveMapView.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
 		8ED7569F1A5095A80073A6A2 = {
 			isa = PBXGroup;
 			children = (
-				8ED756AA1A5095A80073A6A2 /* FSInteractiveMap */,
-				8ED756C71A5095A80073A6A2 /* FSInteractiveMapTests */,
+				0C3F75402C2F2A1D008F190C /* Tests */,
+				0C3F753F2C2F2A17008F190C /* Sources */,
+				8ED756AA1A5095A80073A6A2 /* FSInteractiveMapDemo */,
 				8ED756A91A5095A80073A6A2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -114,12 +140,11 @@
 			isa = PBXGroup;
 			children = (
 				8ED756A81A5095A80073A6A2 /* FSInteractiveMap.app */,
-				8ED756C41A5095A80073A6A2 /* FSInteractiveMapTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8ED756AA1A5095A80073A6A2 /* FSInteractiveMap */ = {
+		8ED756AA1A5095A80073A6A2 /* FSInteractiveMapDemo */ = {
 			isa = PBXGroup;
 			children = (
 				8ED756D41A5099480073A6A2 /* FSInteractiveMap */,
@@ -134,7 +159,7 @@
 				8ED756BD1A5095A80073A6A2 /* LaunchScreen.xib */,
 				8ED756AB1A5095A80073A6A2 /* Supporting Files */,
 			);
-			path = FSInteractiveMap;
+			path = FSInteractiveMapDemo;
 			sourceTree = "<group>";
 		};
 		8ED756AB1A5095A80073A6A2 /* Supporting Files */ = {
@@ -146,31 +171,10 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8ED756C71A5095A80073A6A2 /* FSInteractiveMapTests */ = {
-			isa = PBXGroup;
-			children = (
-				8E302F881C53EA81009A368A /* FSSVGParsingTests.m */,
-				8ED756CA1A5095A80073A6A2 /* FSInteractiveMapTests.m */,
-				8ED756C81A5095A80073A6A2 /* Supporting Files */,
-			);
-			path = FSInteractiveMapTests;
-			sourceTree = "<group>";
-		};
-		8ED756C81A5095A80073A6A2 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8ED756C91A5095A80073A6A2 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		8ED756D41A5099480073A6A2 /* FSInteractiveMap */ = {
 			isa = PBXGroup;
 			children = (
 				8ED756D51A5099480073A6A2 /* Data */,
-				8ED756E21A5099480073A6A2 /* FSInteractiveMapView.h */,
-				8ED756E31A5099480073A6A2 /* FSInteractiveMapView.m */,
-				8ED756E41A5099480073A6A2 /* FSSVG */,
 			);
 			path = FSInteractiveMap;
 			sourceTree = "<group>";
@@ -194,19 +198,6 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		8ED756E41A5099480073A6A2 /* FSSVG */ = {
-			isa = PBXGroup;
-			children = (
-				8ED756E51A5099480073A6A2 /* FSSVG.h */,
-				8ED756E61A5099480073A6A2 /* FSSVG.m */,
-				8ED756E71A5099480073A6A2 /* FSSVGPathElement.h */,
-				8ED756E81A5099480073A6A2 /* FSSVGPathElement.m */,
-				8ED756E91A5099480073A6A2 /* FSSVGUtils.h */,
-				8ED756EA1A5099480073A6A2 /* FSSVGUtils.m */,
-			);
-			path = FSSVG;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -227,24 +218,6 @@
 			productReference = 8ED756A81A5095A80073A6A2 /* FSInteractiveMap.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8ED756C31A5095A80073A6A2 /* FSInteractiveMapTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8ED756D11A5095A80073A6A2 /* Build configuration list for PBXNativeTarget "FSInteractiveMapTests" */;
-			buildPhases = (
-				8ED756C01A5095A80073A6A2 /* Sources */,
-				8ED756C11A5095A80073A6A2 /* Frameworks */,
-				8ED756C21A5095A80073A6A2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8ED756C61A5095A80073A6A2 /* PBXTargetDependency */,
-			);
-			name = FSInteractiveMapTests;
-			productName = FSInteractiveMapTests;
-			productReference = 8ED756C41A5095A80073A6A2 /* FSInteractiveMapTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -257,10 +230,6 @@
 					8ED756A71A5095A80073A6A2 = {
 						CreatedOnToolsVersion = 6.1;
 					};
-					8ED756C31A5095A80073A6A2 = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 8ED756A71A5095A80073A6A2;
-					};
 				};
 			};
 			buildConfigurationList = 8ED756A31A5095A80073A6A2 /* Build configuration list for PBXProject "FSInteractiveMap" */;
@@ -268,6 +237,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -277,7 +247,6 @@
 			projectRoot = "";
 			targets = (
 				8ED756A71A5095A80073A6A2 /* FSInteractiveMap */,
-				8ED756C31A5095A80073A6A2 /* FSInteractiveMapTests */,
 			);
 		};
 /* End PBXProject section */
@@ -305,13 +274,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8ED756C21A5095A80073A6A2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -319,35 +281,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C3F754B2C2F2BE2008F190C /* FSSVG.m in Sources */,
 				8ED756B11A5095A80073A6A2 /* AppDelegate.m in Sources */,
-				8ED756FA1A5099480073A6A2 /* FSSVGUtils.m in Sources */,
 				8ED756F71A5099480073A6A2 /* FSInteractiveMapView.m in Sources */,
 				8ED756B41A5095A80073A6A2 /* MasterViewController.m in Sources */,
-				8ED756F81A5099480073A6A2 /* FSSVG.m in Sources */,
+				0C3F754A2C2F2BE2008F190C /* FSSVGUtils.m in Sources */,
+				0C3F754C2C2F2BE2008F190C /* FSSVGPathElement.m in Sources */,
 				8ED756AE1A5095A80073A6A2 /* main.m in Sources */,
-				8ED756F91A5099480073A6A2 /* FSSVGPathElement.m in Sources */,
 				8ED756B71A5095A80073A6A2 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8ED756C01A5095A80073A6A2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8E302F891C53EA81009A368A /* FSSVGParsingTests.m in Sources */,
-				8ED756CB1A5095A80073A6A2 /* FSInteractiveMapTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		8ED756C61A5095A80073A6A2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8ED756A71A5095A80073A6A2 /* FSInteractiveMap */;
-			targetProxy = 8ED756C51A5095A80073A6A2 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8ED756B81A5095A80073A6A2 /* Main.storyboard */ = {
@@ -452,7 +397,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = FSInteractiveMap/Info.plist;
+				INFOPLIST_FILE = FSInteractiveMapDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.slipcorp.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -463,46 +409,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = FSInteractiveMap/Info.plist;
+				INFOPLIST_FILE = FSInteractiveMapDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.slipcorp.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		8ED756D21A5095A80073A6A2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = FSInteractiveMapTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.slipcorp.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FSInteractiveMap.app/FSInteractiveMap";
-			};
-			name = Debug;
-		};
-		8ED756D31A5095A80073A6A2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = FSInteractiveMapTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.slipcorp.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FSInteractiveMap.app/FSInteractiveMap";
 			};
 			name = Release;
 		};
@@ -523,15 +434,6 @@
 			buildConfigurations = (
 				8ED756CF1A5095A80073A6A2 /* Debug */,
 				8ED756D01A5095A80073A6A2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8ED756D11A5095A80073A6A2 /* Build configuration list for PBXNativeTarget "FSInteractiveMapTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8ED756D21A5095A80073A6A2 /* Debug */,
-				8ED756D31A5095A80073A6A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
